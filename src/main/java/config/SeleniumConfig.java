@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SeleniumConfig {
     static {
-        System.setProperty("webdriver.chrome.driver", "src/main/java/config/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "../config/chromedriver.exe");
     }
 
     private WebDriver driver;
