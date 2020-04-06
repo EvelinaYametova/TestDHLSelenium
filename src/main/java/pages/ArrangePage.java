@@ -22,12 +22,9 @@ public class ArrangePage {
 
     public void closeExcess(){
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        /*wait.until(ExpectedConditions.elementToBeClickable(closeElement));
-        closeElement.click();*/
         wait.until(ExpectedConditions.elementToBeClickable(okElement));
         okElement.click();
     }
-
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[2]/div[4]/div[1]/div[1]/div[2]/div[2]/div[1]/div/label/input")
     private WebElement inputCityFrom;
@@ -50,7 +47,6 @@ public class ArrangePage {
         inputCityTo.sendKeys(cityTo);
         cityToElement.click();
     }
-
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[2]/div[4]/div[2]/div[3]/div/div[2]/div[2]/div/div[1]/label/div/input")
     private WebElement inputWeight;
@@ -142,7 +138,6 @@ public class ArrangePage {
     public WebElement getBtnFurther(){
         return btnFurther;
     }
-
     public void clickFurther(){
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(btnFurther));
